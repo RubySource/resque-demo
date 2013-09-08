@@ -1,0 +1,1691 @@
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-31 10:45:01 -0500
+Connecting to database specified by database.yml
+Processing by AttachmentsController#index as HTML
+Completed 500 Internal Server Error in 16ms
+
+ActiveRecord::StatementInvalid (Could not find table 'attachments'):
+  app/controllers/attachments_controller.rb:13:in `index'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.1ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateAttachments (20120914194605)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "attachments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "file_url" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120914194605')
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("attachments")
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-31 10:45:15 -0500
+Connecting to database specified by database.yml
+Processing by AttachmentsController#index as HTML
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" [0m
+  Rendered attachments/index.html.erb within layouts/application (1.5ms)
+Compiled application.css  (0ms)  (pid 48539)
+Compiled application.js  (0ms)  (pid 48539)
+Completed 200 OK in 70ms (Views: 27.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 10:45:15 -0500
+Served asset /application.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 10:45:15 -0500
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/attachments/new" for 127.0.0.1 at 2013-07-31 10:45:17 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (Set config.filepicker_rails.api_key):
+    1: <%= form_for @attachment do |f| %>
+    2: 
+    3:   <%= f.filepicker_field :file_url, dragdrop: true %>
+    4:   <%= f.submit %>
+    5: 
+    6: <% end %>
+  app/views/attachments/new.html.erb:3:in `block in _app_views_attachments_new_html_erb__290564451717067558_70267357479580'
+  app/views/attachments/new.html.erb:1:in `_app_views_attachments_new_html_erb__290564451717067558_70267357479580'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-31 10:46:36 -0500
+Connecting to database specified by database.yml
+Processing by AttachmentsController#index as HTML
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" [0m
+  Rendered attachments/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 59ms (Views: 17.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 10:46:36 -0500
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 10:46:36 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/attachments/new" for 127.0.0.1 at 2013-07-31 10:46:38 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 15ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 10:46:38 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 10:46:38 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/attachments" for 127.0.0.1 at 2013-07-31 10:46:55 -0500
+Processing by AttachmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7mwdHZ3E3Cumy3nBAycPIgLLH5z/c00pq2fnU3QbEA0=", "attachment"=>{"file_url"=>"https://www.filepicker.io/api/file/l90pf9NsQJ6nzRcyB6Qr"}, "commit"=>"Create Attachment"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.8ms)[0m  [1mINSERT INTO "attachments" ("created_at", "file_url", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Wed, 31 Jul 2013 15:46:55 UTC +00:00], ["file_url", "https://www.filepicker.io/api/file/l90pf9NsQJ6nzRcyB6Qr"], ["updated_at", Wed, 31 Jul 2013 15:46:55 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/attachments
+Completed 302 Found in 9ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/attachments" for 127.0.0.1 at 2013-07-31 10:46:55 -0500
+Processing by AttachmentsController#index as HTML
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" [0m
+  Rendered attachments/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 10:46:55 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 10:46:55 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-31 10:48:52 -0500
+Connecting to database specified by database.yml
+Processing by AttachmentsController#index as HTML
+  Rendered attachments/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <table>
+    3:   <tr><th>Id</th><th>Filepicker.io Url</th><th>image</th></tr>
+    4: 
+    5:   <% @attachments.each do |a| %>
+    6: 
+    7:   <tr><td><%= a.id %></td><td><%= a.file_url %></td>
+    8:     <td><%= filepicker_image_tag a.file_url, w: 300, h: 300 %></td>
+  app/views/attachments/index.html.erb:5:in `_app_views_attachments_index_html_erb___4597872774378980307_70222354748820'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/attachments/new" for 127.0.0.1 at 2013-07-31 10:49:11 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 57ms (Views: 12.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 10:49:11 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 10:49:11 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/attachments" for 127.0.0.1 at 2013-07-31 10:49:26 -0500
+Processing by AttachmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7mwdHZ3E3Cumy3nBAycPIgLLH5z/c00pq2fnU3QbEA0=", "attachment"=>{"file_url"=>"https://www.filepicker.io/api/file/GCa2uXtLTIW4qMo0W0cb"}, "commit"=>"Create Attachment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.9ms)[0m  INSERT INTO "attachments" ("created_at", "file_url", "updated_at") VALUES (?, ?, ?)  [["created_at", Wed, 31 Jul 2013 15:49:26 UTC +00:00], ["file_url", "https://www.filepicker.io/api/file/GCa2uXtLTIW4qMo0W0cb"], ["updated_at", Wed, 31 Jul 2013 15:49:26 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  Rendered attachments/create.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 4.0ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 10:49:26 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 10:49:27 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateAttachments (20120914194605)
+Migrating to AddPageCountToAttachments (20130731155634)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "attachments" ADD "page_count" integer
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130731155634')[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("attachments")[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-31 10:59:11 -0500
+Connecting to database specified by database.yml
+Processing by AttachmentsController#index as HTML
+  Rendered attachments/index.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <table>
+    3:   <tr><th>Id</th><th>Filepicker.io Url</th><th>image</th></tr>
+    4: 
+    5:   <% @attachments.each do |a| %>
+    6: 
+    7:   <tr><td><%= a.id %></td><td><%= a.file_url %></td>
+    8:     <td><%= filepicker_image_tag a.file_url, w: 300, h: 300 %></td>
+  app/views/attachments/index.html.erb:5:in `_app_views_attachments_index_html_erb___1560298158553118886_70353690841240'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/attachments/new" for 127.0.0.1 at 2013-07-31 10:59:49 -0500
+Connecting to database specified by database.yml
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 64ms (Views: 19.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 10:59:49 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 10:59:49 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/attachments" for 127.0.0.1 at 2013-07-31 10:59:51 -0500
+Processing by AttachmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7mwdHZ3E3Cumy3nBAycPIgLLH5z/c00pq2fnU3QbEA0=", "attachment"=>{"file_url"=>""}, "commit"=>"Create Attachment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.9ms)[0m  INSERT INTO "attachments" ("created_at", "file_url", "page_count", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 31 Jul 2013 15:59:51 UTC +00:00], ["file_url", ""], ["page_count", nil], ["updated_at", Wed, 31 Jul 2013 15:59:51 UTC +00:00]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 10ms
+
+NoMethodError (undefined method `delay' for #<Class:0x007fecbcf794e0>):
+  app/controllers/attachments_controller.rb:11:in `create'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-31 11:00:30 -0500
+Connecting to database specified by database.yml
+Processing by AttachmentsController#index as HTML
+  Rendered attachments/index.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <table>
+    3:   <tr><th>Id</th><th>Filepicker.io Url</th><th>image</th></tr>
+    4: 
+    5:   <% @attachments.each do |a| %>
+    6: 
+    7:   <tr><td><%= a.id %></td><td><%= a.file_url %></td>
+    8:     <td><%= filepicker_image_tag a.file_url, w: 300, h: 300 %></td>
+  app/views/attachments/index.html.erb:5:in `_app_views_attachments_index_html_erb__4162659388896219959_70153816838620'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.7ms)
+
+
+Started GET "/documents/new" for 127.0.0.1 at 2013-07-31 11:00:52 -0500
+Connecting to database specified by database.yml
+
+ActionController::RoutingError (No route matches [GET] "/documents/new"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/attachments/new" for 127.0.0.1 at 2013-07-31 11:00:59 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 57ms (Views: 14.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 11:00:59 -0500
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 11:00:59 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/attachments" for 127.0.0.1 at 2013-07-31 11:01:08 -0500
+Processing by AttachmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7mwdHZ3E3Cumy3nBAycPIgLLH5z/c00pq2fnU3QbEA0=", "attachment"=>{"file_url"=>"https://www.filepicker.io/api/file/hMEfSczlQleYPkWcdU7i"}, "commit"=>"Create Attachment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.7ms)[0m  INSERT INTO "attachments" ("created_at", "file_url", "page_count", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 31 Jul 2013 16:01:08 UTC +00:00], ["file_url", "https://www.filepicker.io/api/file/hMEfSczlQleYPkWcdU7i"], ["page_count", nil], ["updated_at", Wed, 31 Jul 2013 16:01:08 UTC +00:00]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 9ms
+
+NoMethodError (undefined method `save_page_count' for #<Class:0x007fa15ada4d20>):
+  app/controllers/attachments_controller.rb:11:in `create'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-31 11:01:54 -0500
+Connecting to database specified by database.yml
+Processing by AttachmentsController#index as HTML
+  Rendered attachments/index.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <table>
+    3:   <tr><th>Id</th><th>Filepicker.io Url</th><th>image</th></tr>
+    4: 
+    5:   <% @attachments.each do |a| %>
+    6: 
+    7:   <tr><td><%= a.id %></td><td><%= a.file_url %></td>
+    8:     <td><%= filepicker_image_tag a.file_url, w: 300, h: 300 %></td>
+  app/views/attachments/index.html.erb:5:in `_app_views_attachments_index_html_erb___4326510435367211777_70159594475860'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.9ms)
+
+
+Started GET "/attachments/new" for 127.0.0.1 at 2013-07-31 11:02:01 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 31ms (Views: 13.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 11:02:01 -0500
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 11:02:01 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/attachments" for 127.0.0.1 at 2013-07-31 11:02:02 -0500
+Processing by AttachmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7mwdHZ3E3Cumy3nBAycPIgLLH5z/c00pq2fnU3QbEA0=", "attachment"=>{"file_url"=>""}, "commit"=>"Create Attachment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.7ms)[0m  INSERT INTO "attachments" ("created_at", "file_url", "page_count", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 31 Jul 2013 16:02:02 UTC +00:00], ["file_url", ""], ["page_count", nil], ["updated_at", Wed, 31 Jul 2013 16:02:02 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 11ms
+
+Errno::ENOENT (No such file or directory - ):
+  app/models/attachment.rb:5:in `initialize'
+  app/models/attachment.rb:5:in `open'
+  app/models/attachment.rb:5:in `save_page_count'
+  app/controllers/attachments_controller.rb:11:in `create'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.2ms)
+
+
+Started POST "/attachments" for 127.0.0.1 at 2013-07-31 11:02:17 -0500
+Processing by AttachmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7mwdHZ3E3Cumy3nBAycPIgLLH5z/c00pq2fnU3QbEA0=", "attachment"=>{"file_url"=>"https://www.filepicker.io/api/file/ILKTxydSkSbRx9NAZGxA"}, "commit"=>"Create Attachment"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "attachments" ("created_at", "file_url", "page_count", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 31 Jul 2013 16:02:17 UTC +00:00], ["file_url", "https://www.filepicker.io/api/file/ILKTxydSkSbRx9NAZGxA"], ["page_count", nil], ["updated_at", Wed, 31 Jul 2013 16:02:17 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Completed 500 Internal Server Error in 3ms
+
+Errno::ENOENT (No such file or directory - https://www.filepicker.io/api/file/ILKTxydSkSbRx9NAZGxA):
+  app/models/attachment.rb:5:in `initialize'
+  app/models/attachment.rb:5:in `open'
+  app/models/attachment.rb:5:in `save_page_count'
+  app/controllers/attachments_controller.rb:11:in `create'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-31 11:05:05 -0500
+Connecting to database specified by database.yml
+Processing by AttachmentsController#index as HTML
+  Rendered attachments/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 34ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <table>
+    3:   <tr><th>Id</th><th>Filepicker.io Url</th><th>image</th></tr>
+    4: 
+    5:   <% @attachments.each do |a| %>
+    6: 
+    7:   <tr><td><%= a.id %></td><td><%= a.file_url %></td>
+    8:     <td><%= filepicker_image_tag a.file_url, w: 300, h: 300 %></td>
+  app/views/attachments/index.html.erb:5:in `_app_views_attachments_index_html_erb___2736407966385362223_70098787380520'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.3ms)
+
+
+Started GET "/attachments/new" for 127.0.0.1 at 2013-07-31 11:05:09 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 31ms (Views: 12.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 11:05:09 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 11:05:09 -0500
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started POST "/attachments" for 127.0.0.1 at 2013-07-31 11:05:18 -0500
+Processing by AttachmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7mwdHZ3E3Cumy3nBAycPIgLLH5z/c00pq2fnU3QbEA0=", "attachment"=>{"file_url"=>"https://www.filepicker.io/api/file/PuS2LPKSu2OKBaVqxCf1"}, "commit"=>"Create Attachment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  INSERT INTO "attachments" ("created_at", "file_url", "page_count", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 31 Jul 2013 16:05:18 UTC +00:00], ["file_url", "https://www.filepicker.io/api/file/PuS2LPKSu2OKBaVqxCf1"], ["page_count", nil], ["updated_at", Wed, 31 Jul 2013 16:05:18 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "attachments" SET "page_count" = 1, "updated_at" = '2013-07-31 16:05:19.962133' WHERE "attachments"."id" = 7[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+  Rendered attachments/create.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1389ms (Views: 5.0ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 11:05:20 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 11:05:20 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateAttachments (20120914194605)
+Migrating to AddPageCountToAttachments (20130731155634)
+Migrating to CreateDelayedJobs (20130731160622)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "delayed_jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "priority" integer DEFAULT 0 NOT NULL, "attempts" integer DEFAULT 0 NOT NULL, "handler" text NOT NULL, "last_error" text, "run_at" datetime, "locked_at" datetime, "failed_at" datetime, "locked_by" varchar(255), "queue" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("delayed_jobs")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "delayed_jobs_priority" ON "delayed_jobs" ("priority", "run_at")
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130731160622')[0m
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("attachments")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("delayed_jobs")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('delayed_jobs_priority')[0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-31 11:07:03 -0500
+Processing by AttachmentsController#index as HTML
+  Rendered attachments/index.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <table>
+    3:   <tr><th>Id</th><th>Filepicker.io Url</th><th>image</th></tr>
+    4: 
+    5:   <% @attachments.each do |a| %>
+    6: 
+    7:   <tr><td><%= a.id %></td><td><%= a.file_url %></td>
+    8:     <td><%= filepicker_image_tag a.file_url, w: 300, h: 300 %></td>
+  app/views/attachments/index.html.erb:5:in `_app_views_attachments_index_html_erb__1094393558128370358_70216616988660'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.3ms)
+
+
+Started GET "/attachments/new" for 127.0.0.1 at 2013-07-31 11:07:06 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 58ms (Views: 50.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 11:07:07 -0500
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 11:07:07 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/attachments" for 127.0.0.1 at 2013-07-31 11:07:18 -0500
+Processing by AttachmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7mwdHZ3E3Cumy3nBAycPIgLLH5z/c00pq2fnU3QbEA0=", "attachment"=>{"file_url"=>"https://www.filepicker.io/api/file/LCqxvZPCR86ZRUUhCnLE"}, "commit"=>"Create Attachment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.6ms)[0m  INSERT INTO "attachments" ("created_at", "file_url", "page_count", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 31 Jul 2013 16:07:18 UTC +00:00], ["file_url", "https://www.filepicker.io/api/file/LCqxvZPCR86ZRUUhCnLE"], ["page_count", nil], ["updated_at", Wed, 31 Jul 2013 16:07:18 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "delayed_jobs" ("attempts", "created_at", "failed_at", "handler", "last_error", "locked_at", "locked_by", "priority", "queue", "run_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["attempts", 0], ["created_at", Wed, 31 Jul 2013 16:07:18 UTC +00:00], ["failed_at", nil], ["handler", "--- !ruby/object:Delayed::PerformableMethod\nobject: !ruby/ActiveRecord:Attachment\n  attributes:\n    id: 8\n    file_url: https://www.filepicker.io/api/file/LCqxvZPCR86ZRUUhCnLE\n    created_at: 2013-07-31 16:07:18.574698000 Z\n    updated_at: 2013-07-31 16:07:18.574698000 Z\n    page_count: \nmethod_name: :save_page_count\nargs: []\n"], ["last_error", nil], ["locked_at", nil], ["locked_by", nil], ["priority", 0], ["queue", nil], ["run_at", Wed, 31 Jul 2013 16:07:18 UTC +00:00], ["updated_at", Wed, 31 Jul 2013 16:07:18 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  Rendered attachments/create.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 4.0ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 11:07:18 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 11:07:18 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2013-07-31 16:08:21.112036' AND (locked_at IS NULL OR locked_at < '2013-07-31 12:08:21.112053') OR locked_by = 'host:Dhaivats-MacBook-Air.local pid:48717') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5[0m
+  [1m[35mSQL (2.5ms)[0m  UPDATE "delayed_jobs" SET "locked_at" = '2013-07-31 16:08:21.115271', "locked_by" = 'host:Dhaivats-MacBook-Air.local pid:48717' WHERE "delayed_jobs"."id" IN (SELECT "delayed_jobs"."id" FROM "delayed_jobs" WHERE "delayed_jobs"."id" = 1 AND ((run_at <= '2013-07-31 16:08:21.112036' AND (locked_at IS NULL OR locked_at < '2013-07-31 12:08:21.112053') OR locked_by = 'host:Dhaivats-MacBook-Air.local pid:48717') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC)
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE "delayed_jobs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "attachments" SET "page_count" = 1, "updated_at" = '2013-07-31 16:08:22.643236' WHERE "attachments"."id" = 8
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "delayed_jobs" WHERE "delayed_jobs"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2013-07-31 16:08:22.650728' AND (locked_at IS NULL OR locked_at < '2013-07-31 12:08:22.650758') OR locked_by = 'host:Dhaivats-MacBook-Air.local pid:48717') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5[0m
+  [1m[35mDelayed::Backend::ActiveRecord::Job Load (0.1ms)[0m  SELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2013-07-31 16:08:22.652494' AND (locked_at IS NULL OR locked_at < '2013-07-31 12:08:22.652508') OR locked_by = 'host:Dhaivats-MacBook-Air.local pid:48717') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2013-07-31 16:08:27.654899' AND (locked_at IS NULL OR locked_at < '2013-07-31 12:08:27.654961') OR locked_by = 'host:Dhaivats-MacBook-Air.local pid:48717') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "delayed_jobs" SET "locked_by" = NULL, "locked_at" = NULL WHERE "delayed_jobs"."locked_by" = 'host:Dhaivats-MacBook-Air.local pid:48717'
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-31 11:09:36 -0500
+Processing by AttachmentsController#index as HTML
+  Rendered attachments/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <table>
+    3:   <tr><th>Id</th><th>Filepicker.io Url</th><th>image</th></tr>
+    4: 
+    5:   <% @attachments.each do |a| %>
+    6: 
+    7:   <tr><td><%= a.id %></td><td><%= a.file_url %></td>
+    8:     <td><%= filepicker_image_tag a.file_url, w: 300, h: 300 %></td>
+  app/views/attachments/index.html.erb:5:in `_app_views_attachments_index_html_erb__1094393558128370358_70216616988660'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.4ms)
+
+
+Started GET "/attachments/new" for 127.0.0.1 at 2013-07-31 11:09:40 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 11:09:40 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 11:09:40 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started POST "/attachments" for 127.0.0.1 at 2013-07-31 11:09:49 -0500
+Processing by AttachmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7mwdHZ3E3Cumy3nBAycPIgLLH5z/c00pq2fnU3QbEA0=", "attachment"=>{"file_url"=>"https://www.filepicker.io/api/file/OWiTRr0RQQu8CR95EpoC"}, "commit"=>"Create Attachment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "attachments" ("created_at", "file_url", "page_count", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 31 Jul 2013 16:09:49 UTC +00:00], ["file_url", "https://www.filepicker.io/api/file/OWiTRr0RQQu8CR95EpoC"], ["page_count", nil], ["updated_at", Wed, 31 Jul 2013 16:09:49 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "delayed_jobs" ("attempts", "created_at", "failed_at", "handler", "last_error", "locked_at", "locked_by", "priority", "queue", "run_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["attempts", 0], ["created_at", Wed, 31 Jul 2013 16:09:49 UTC +00:00], ["failed_at", nil], ["handler", "--- !ruby/object:Delayed::PerformableMethod\nobject: !ruby/ActiveRecord:Attachment\n  attributes:\n    id: 9\n    file_url: https://www.filepicker.io/api/file/OWiTRr0RQQu8CR95EpoC\n    created_at: 2013-07-31 16:09:49.941022000 Z\n    updated_at: 2013-07-31 16:09:49.941022000 Z\n    page_count: \nmethod_name: :save_page_count\nargs: []\n"], ["last_error", nil], ["locked_at", nil], ["locked_by", nil], ["priority", 0], ["queue", nil], ["run_at", Wed, 31 Jul 2013 16:09:49 UTC +00:00], ["updated_at", Wed, 31 Jul 2013 16:09:49 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  Rendered attachments/create.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 4.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 11:09:50 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 11:09:50 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2013-07-31 16:10:02.348729' AND (locked_at IS NULL OR locked_at < '2013-07-31 12:10:02.348746') OR locked_by = 'host:Dhaivats-MacBook-Air.local pid:48728') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "delayed_jobs" SET "locked_at" = '2013-07-31 16:10:02.352056', "locked_by" = 'host:Dhaivats-MacBook-Air.local pid:48728' WHERE "delayed_jobs"."id" IN (SELECT "delayed_jobs"."id" FROM "delayed_jobs" WHERE "delayed_jobs"."id" = 2 AND ((run_at <= '2013-07-31 16:10:02.348729' AND (locked_at IS NULL OR locked_at < '2013-07-31 12:10:02.348746') OR locked_by = 'host:Dhaivats-MacBook-Air.local pid:48728') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC)
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE "delayed_jobs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "attachments" SET "page_count" = 1, "updated_at" = '2013-07-31 16:10:04.040498' WHERE "attachments"."id" = 9
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "delayed_jobs" WHERE "delayed_jobs"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  [1mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2013-07-31 16:10:04.049506' AND (locked_at IS NULL OR locked_at < '2013-07-31 12:10:04.049541') OR locked_by = 'host:Dhaivats-MacBook-Air.local pid:48728') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5[0m
+  [1m[35mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m  SELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2013-07-31 16:10:04.051449' AND (locked_at IS NULL OR locked_at < '2013-07-31 12:10:04.051462') OR locked_by = 'host:Dhaivats-MacBook-Air.local pid:48728') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  [1mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2013-07-31 16:10:09.053754' AND (locked_at IS NULL OR locked_at < '2013-07-31 12:10:09.053809') OR locked_by = 'host:Dhaivats-MacBook-Air.local pid:48728') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5[0m
+  [1m[35mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m  SELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2013-07-31 16:10:14.056827' AND (locked_at IS NULL OR locked_at < '2013-07-31 12:10:14.056920') OR locked_by = 'host:Dhaivats-MacBook-Air.local pid:48728') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-31 11:10:15 -0500
+Processing by AttachmentsController#index as HTML
+  Rendered attachments/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <table>
+    3:   <tr><th>Id</th><th>Filepicker.io Url</th><th>image</th></tr>
+    4: 
+    5:   <% @attachments.each do |a| %>
+    6: 
+    7:   <tr><td><%= a.id %></td><td><%= a.file_url %></td>
+    8:     <td><%= filepicker_image_tag a.file_url, w: 300, h: 300 %></td>
+  app/views/attachments/index.html.erb:5:in `_app_views_attachments_index_html_erb__1094393558128370358_70216616988660'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (33.0ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (39.9ms)
+  [1m[36mDelayed::Backend::ActiveRecord::Job Load (0.4ms)[0m  [1mSELECT "delayed_jobs".* FROM "delayed_jobs" WHERE ((run_at <= '2013-07-31 16:10:19.059883' AND (locked_at IS NULL OR locked_at < '2013-07-31 12:10:19.059942') OR locked_by = 'host:Dhaivats-MacBook-Air.local pid:48728') AND failed_at IS NULL) ORDER BY priority ASC, run_at ASC LIMIT 5[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "delayed_jobs" SET "locked_by" = NULL, "locked_at" = NULL WHERE "delayed_jobs"."locked_by" = 'host:Dhaivats-MacBook-Air.local pid:48728'
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-31 11:17:13 -0500
+Processing by AttachmentsController#index as HTML
+  Rendered attachments/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <table>
+    3:   <tr><th>Id</th><th>Filepicker.io Url</th><th>image</th></tr>
+    4: 
+    5:   <% @attachments.each do |a| %>
+    6: 
+    7:   <tr><td><%= a.id %></td><td><%= a.file_url %></td>
+    8:     <td><%= filepicker_image_tag a.file_url, w: 300, h: 300 %></td>
+  app/views/attachments/index.html.erb:5:in `_app_views_attachments_index_html_erb__1094393558128370358_70216616988660'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.7ms)
+
+
+Started GET "/attachments/new" for 127.0.0.1 at 2013-07-31 11:17:19 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 14ms (Views: 6.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 11:17:19 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 11:17:19 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/attachments" for 127.0.0.1 at 2013-07-31 11:17:29 -0500
+Processing by AttachmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7mwdHZ3E3Cumy3nBAycPIgLLH5z/c00pq2fnU3QbEA0=", "attachment"=>{"file_url"=>"https://www.filepicker.io/api/file/PzbzOLyQiOa49koYCAgw"}, "commit"=>"Create Attachment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "attachments" ("created_at", "file_url", "page_count", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 31 Jul 2013 16:17:29 UTC +00:00], ["file_url", "https://www.filepicker.io/api/file/PzbzOLyQiOa49koYCAgw"], ["page_count", nil], ["updated_at", Wed, 31 Jul 2013 16:17:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "delayed_jobs" ("attempts", "created_at", "failed_at", "handler", "last_error", "locked_at", "locked_by", "priority", "queue", "run_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["attempts", 0], ["created_at", Wed, 31 Jul 2013 16:17:29 UTC +00:00], ["failed_at", nil], ["handler", "--- !ruby/object:Delayed::PerformableMethod\nobject: !ruby/ActiveRecord:Attachment\n  attributes:\n    id: 10\n    file_url: https://www.filepicker.io/api/file/PzbzOLyQiOa49koYCAgw\n    created_at: 2013-07-31 16:17:29.546368000 Z\n    updated_at: 2013-07-31 16:17:29.546368000 Z\n    page_count: \nmethod_name: :save_page_count\nargs: []\n"], ["last_error", nil], ["locked_at", nil], ["locked_by", nil], ["priority", 0], ["queue", nil], ["run_at", Wed, 31 Jul 2013 16:17:29 UTC +00:00], ["updated_at", Wed, 31 Jul 2013 16:17:29 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  Rendered attachments/create.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 13ms (Views: 3.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 11:17:29 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 11:17:29 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/attachments/1" for 127.0.0.1 at 2013-07-31 11:17:33 -0500
+
+ActionController::RoutingError (No route matches [GET] "/attachments/1"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/attachments/2" for 127.0.0.1 at 2013-07-31 11:17:36 -0500
+
+ActionController::RoutingError (No route matches [GET] "/attachments/2"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/attachments/2" for 127.0.0.1 at 2013-07-31 11:18:03 -0500
+Processing by AttachmentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Completed 500 Internal Server Error in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Attachment with id=2):
+  app/controllers/attachments_controller.rb:18:in `show'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.1ms)
+
+
+Started GET "/attachments/1" for 127.0.0.1 at 2013-07-31 11:18:06 -0500
+Processing by AttachmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Attachment with id=1):
+  app/controllers/attachments_controller.rb:18:in `show'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.8ms)
+
+
+Started GET "/attachments/0" for 127.0.0.1 at 2013-07-31 11:18:11 -0500
+Processing by AttachmentsController#show as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1[0m  [["id", "0"]]
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Attachment with id=0):
+  app/controllers/attachments_controller.rb:18:in `show'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.7ms)
+
+
+Started GET "/attachments/6" for 127.0.0.1 at 2013-07-31 11:18:15 -0500
+Processing by AttachmentsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1  [["id", "6"]]
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Attachment with id=6):
+  app/controllers/attachments_controller.rb:18:in `show'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.9ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/attachments/9" for 127.0.0.1 at 2013-07-31 11:18:28 -0500
+Processing by AttachmentsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1[0m  [["id", "9"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  Rendered attachments/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 740ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-31 11:18:29 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-31 11:18:29 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-23 13:31:25 -0500
+Processing by AttachmentsController#index as HTML
+  Rendered attachments/index.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <table>
+    3:   <tr><th>Id</th><th>Filepicker.io Url</th><th>image</th></tr>
+    4: 
+    5:   <% @attachments.each do |a| %>
+    6: 
+    7:   <tr><td><%= a.id %></td><td><%= a.file_url %></td>
+    8:     <td><%= filepicker_image_tag a.file_url, w: 300, h: 300 %></td>
+  app/views/attachments/index.html.erb:5:in `_app_views_attachments_index_html_erb___762144389086958426_70165643914640'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.7ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateAttachments (20120914194605)
+Migrating to AddPageCountToAttachments (20130731155634)
+Migrating to CreateDelayedJobs (20130731160622)
+  [1m[35m (0.8ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("attachments")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("delayed_jobs")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('delayed_jobs_priority')
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-23 13:31:47 -0500
+Processing by AttachmentsController#index as HTML
+  Rendered attachments/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <table>
+    3:   <tr><th>Id</th><th>Filepicker.io Url</th><th>image</th></tr>
+    4: 
+    5:   <% @attachments.each do |a| %>
+    6: 
+    7:   <tr><td><%= a.id %></td><td><%= a.file_url %></td>
+    8:     <td><%= filepicker_image_tag a.file_url, w: 300, h: 300 %></td>
+  app/views/attachments/index.html.erb:5:in `_app_views_attachments_index_html_erb__1319473001950787806_70259735743760'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-29 08:16:35 -0500
+Processing by AttachmentsController#index as HTML
+  Rendered attachments/index.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <table>
+    3:   <tr><th>Id</th><th>Filepicker.io Url</th><th>image</th></tr>
+    4: 
+    5:   <% @attachments.each do |a| %>
+    6: 
+    7:   <tr><td><%= a.id %></td><td><%= a.file_url %></td>
+    8:     <td><%= filepicker_image_tag a.file_url, w: 300, h: 300 %></td>
+  app/views/attachments/index.html.erb:5:in `_app_views_attachments_index_html_erb__3141472663110147352_70232132268780'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.9ms)
+
+
+Started GET "/socket.io/1/?t=1377782204115" for 127.0.0.1 at 2013-08-29 08:16:44 -0500
+
+ActionController::RoutingError (No route matches [GET] "/socket.io/1"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/socket.io/1/?t=1377782204115" for 127.0.0.1 at 2013-08-29 08:16:44 -0500
+
+ActionController::RoutingError (No route matches [GET] "/socket.io/1"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/socket.io/1/?t=1377782204115" for 127.0.0.1 at 2013-08-29 08:16:44 -0500
+
+ActionController::RoutingError (No route matches [GET] "/socket.io/1"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateAttachments (20120914194605)
+Migrating to AddPageCountToAttachments (20130731155634)
+Migrating to CreateDelayedJobs (20130731160622)
+  [1m[35m (0.7ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("attachments")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("delayed_jobs")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('delayed_jobs_priority')
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/attachments" for 127.0.0.1 at 2013-08-29 08:19:18 -0500
+Processing by AttachmentsController#index as HTML
+  Rendered attachments/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <table>
+    3:   <tr><th>Id</th><th>Filepicker.io Url</th><th>image</th></tr>
+    4: 
+    5:   <% @attachments.each do |a| %>
+    6: 
+    7:   <tr><td><%= a.id %></td><td><%= a.file_url %></td>
+    8:     <td><%= filepicker_image_tag a.file_url, w: 300, h: 300 %></td>
+  app/views/attachments/index.html.erb:5:in `_app_views_attachments_index_html_erb__1770123993859316297_70186114497720'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.9ms)
+
+
+Started GET "/attachments/new" for 127.0.0.1 at 2013-08-29 08:19:25 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 70ms (Views: 27.2ms | ActiveRecord: 36.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-29 08:19:26 -0500
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-29 08:19:26 -0500
+Served asset /application.js - 200 OK (1ms)
+
+
+Started POST "/attachments" for 127.0.0.1 at 2013-08-29 08:19:55 -0500
+Processing by AttachmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jZYXxEPPugOuMFX19M7zu/1NGBK4R2UXFwk0/SqifN4=", "attachment"=>{"file_url"=>"https://www.filepicker.io/api/file/LfTZULWuTIWtPslE74RD"}, "commit"=>"Create Attachment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (7.8ms)[0m  INSERT INTO "attachments" ("created_at", "file_url", "page_count", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 29 Aug 2013 13:19:55 UTC +00:00], ["file_url", "https://www.filepicker.io/api/file/LfTZULWuTIWtPslE74RD"], ["page_count", nil], ["updated_at", Thu, 29 Aug 2013 13:19:55 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "delayed_jobs" ("attempts", "created_at", "failed_at", "handler", "last_error", "locked_at", "locked_by", "priority", "queue", "run_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["attempts", 0], ["created_at", Thu, 29 Aug 2013 13:19:55 UTC +00:00], ["failed_at", nil], ["handler", "--- !ruby/object:Delayed::PerformableMethod\nobject: !ruby/ActiveRecord:Attachment\n  attributes:\n    id: 11\n    file_url: https://www.filepicker.io/api/file/LfTZULWuTIWtPslE74RD\n    created_at: 2013-08-29 13:19:55.754122000 Z\n    updated_at: 2013-08-29 13:19:55.754122000 Z\n    page_count: \nmethod_name: :save_page_count\nargs: []\n"], ["last_error", nil], ["locked_at", nil], ["locked_by", nil], ["priority", 0], ["queue", nil], ["run_at", Thu, 29 Aug 2013 13:19:55 UTC +00:00], ["updated_at", Thu, 29 Aug 2013 13:19:55 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  Rendered attachments/create.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 38ms (Views: 4.6ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/attachments/0" for 127.0.0.1 at 2013-08-29 08:20:27 -0500
+Processing by AttachmentsController#show as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1[0m  [["id", "0"]]
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Attachment with id=0):
+  app/controllers/attachments_controller.rb:18:in `show'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+
+
+Started GET "/attachments/1" for 127.0.0.1 at 2013-08-29 08:20:32 -0500
+Processing by AttachmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAttachment Load (0.1ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Attachment with id=1):
+  app/controllers/attachments_controller.rb:18:in `show'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/attachments/0" for 127.0.0.1 at 2013-08-29 08:20:54 -0500
+Processing by AttachmentsController#show as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1[0m  [["id", "0"]]
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Attachment with id=0):
+  app/controllers/attachments_controller.rb:18:in `show'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.7ms)
+
+
+Started GET "/attachments/9" for 127.0.0.1 at 2013-08-29 08:21:57 -0500
+Processing by AttachmentsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mAttachment Load (0.2ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  Rendered attachments/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1542ms (Views: 5.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-29 08:23:13 -0500
+Processing by AttachmentsController#index as HTML
+  Rendered attachments/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <table>
+    3:   <tr><th>Id</th><th>Filepicker.io Url</th><th>image</th></tr>
+    4: 
+    5:   <% @attachments.each do |a| %>
+    6: 
+    7:   <tr><td><%= a.id %></td><td><%= a.file_url %></td>
+    8:     <td><%= filepicker_image_tag a.file_url, w: 300, h: 300 %></td>
+  app/views/attachments/index.html.erb:5:in `_app_views_attachments_index_html_erb__1770123993859316297_70186114497720'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.1ms)
+
+
+Started GET "/attachments/new" for 127.0.0.1 at 2013-08-29 08:23:20 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-29 08:23:20 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-29 08:23:20 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/attachments" for 127.0.0.1 at 2013-08-29 08:23:30 -0500
+Processing by AttachmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jZYXxEPPugOuMFX19M7zu/1NGBK4R2UXFwk0/SqifN4=", "attachment"=>{"file_url"=>"https://www.filepicker.io/api/file/6fZodAItTgmrhLbe1713"}, "commit"=>"Create Attachment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "attachments" ("created_at", "file_url", "page_count", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 29 Aug 2013 13:23:30 UTC +00:00], ["file_url", "https://www.filepicker.io/api/file/6fZodAItTgmrhLbe1713"], ["page_count", nil], ["updated_at", Thu, 29 Aug 2013 13:23:30 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "delayed_jobs" ("attempts", "created_at", "failed_at", "handler", "last_error", "locked_at", "locked_by", "priority", "queue", "run_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["attempts", 0], ["created_at", Thu, 29 Aug 2013 13:23:30 UTC +00:00], ["failed_at", nil], ["handler", "--- !ruby/object:Delayed::PerformableMethod\nobject: !ruby/ActiveRecord:Attachment\n  attributes:\n    id: 12\n    file_url: https://www.filepicker.io/api/file/6fZodAItTgmrhLbe1713\n    created_at: 2013-08-29 13:23:30.898753000 Z\n    updated_at: 2013-08-29 13:23:30.898753000 Z\n    page_count: \nmethod_name: :save_page_count\nargs: []\n"], ["last_error", nil], ["locked_at", nil], ["locked_by", nil], ["priority", 0], ["queue", nil], ["run_at", Thu, 29 Aug 2013 13:23:30 UTC +00:00], ["updated_at", Thu, 29 Aug 2013 13:23:30 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  Rendered attachments/create.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 4.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-29 08:23:31 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-29 08:23:31 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/attachments" for 127.0.0.1 at 2013-08-29 08:23:32 -0500
+Processing by AttachmentsController#index as HTML
+  Rendered attachments/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <table>
+    3:   <tr><th>Id</th><th>Filepicker.io Url</th><th>image</th></tr>
+    4: 
+    5:   <% @attachments.each do |a| %>
+    6: 
+    7:   <tr><td><%= a.id %></td><td><%= a.file_url %></td>
+    8:     <td><%= filepicker_image_tag a.file_url, w: 300, h: 300 %></td>
+  app/views/attachments/index.html.erb:5:in `_app_views_attachments_index_html_erb__1770123993859316297_70186114497720'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-29 08:26:19 -0500
+Processing by AttachmentsController#index as HTML
+  Rendered attachments/index.html.erb within layouts/application (47.7ms)
+Completed 500 Internal Server Error in 51ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <table>
+    3:   <tr><th>Id</th><th>Filepicker.io Url</th><th>image</th></tr>
+    4: 
+    5:   <% @attachments.each do |a| %>
+    6: 
+    7:   <tr><td><%= a.id %></td><td><%= a.file_url %></td>
+    8:     <td><%= filepicker_image_tag a.file_url, w: 300, h: 300 %></td>
+  app/views/attachments/index.html.erb:5:in `_app_views_attachments_index_html_erb__1770123993859316297_70186114497720'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.1ms)
+
+
+Started GET "/attachments/new" for 127.0.0.1 at 2013-08-29 08:26:25 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 14ms (Views: 6.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-29 08:26:26 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-29 08:26:26 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/attachments" for 127.0.0.1 at 2013-08-29 08:26:37 -0500
+Processing by AttachmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jZYXxEPPugOuMFX19M7zu/1NGBK4R2UXFwk0/SqifN4=", "attachment"=>{"file_url"=>"https://www.filepicker.io/api/file/oRiRc9I6RuuVA5CD3Ej8"}, "commit"=>"Create Attachment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "attachments" ("created_at", "file_url", "page_count", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 29 Aug 2013 13:26:37 UTC +00:00], ["file_url", "https://www.filepicker.io/api/file/oRiRc9I6RuuVA5CD3Ej8"], ["page_count", nil], ["updated_at", Thu, 29 Aug 2013 13:26:37 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "delayed_jobs" ("attempts", "created_at", "failed_at", "handler", "last_error", "locked_at", "locked_by", "priority", "queue", "run_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["attempts", 0], ["created_at", Thu, 29 Aug 2013 13:26:37 UTC +00:00], ["failed_at", nil], ["handler", "--- !ruby/object:Delayed::PerformableMethod\nobject: !ruby/ActiveRecord:Attachment\n  attributes:\n    id: 13\n    file_url: https://www.filepicker.io/api/file/oRiRc9I6RuuVA5CD3Ej8\n    created_at: 2013-08-29 13:26:37.318430000 Z\n    updated_at: 2013-08-29 13:26:37.318430000 Z\n    page_count: \nmethod_name: :save_page_count\nargs: []\n"], ["last_error", nil], ["locked_at", nil], ["locked_by", nil], ["priority", 0], ["queue", nil], ["run_at", Thu, 29 Aug 2013 13:26:37 UTC +00:00], ["updated_at", Thu, 29 Aug 2013 13:26:37 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  Rendered attachments/create.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 5.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-29 08:26:37 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-29 08:26:37 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/attachments/13" for 127.0.0.1 at 2013-08-29 08:26:38 -0500
+Processing by AttachmentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mAttachment Load (0.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1[0m  [["id", "13"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mUPDATE "attachments" SET "page_count" = 2, "updated_at" = '2013-08-29 13:26:39.294024' WHERE "attachments"."id" = 13[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+  Rendered attachments/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 532ms (Views: 3.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-29 08:26:39 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-29 08:26:39 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-30 12:32:52 -0500
+
+AbstractController::ActionNotFound (The action 'index' could not be found for AttachmentsController):
+  actionpack (3.2.8) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__2204503238713665286__call__279806598234010364__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/dhaivat/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (24.7ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-30 16:00:10 -0500
+Processing by AttachmentsController#index as HTML
+  Rendered attachments/index.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <table>
+    3:   <tr><th>Id</th><th>Filepicker.io Url</th><th>image</th></tr>
+    4: 
+    5:   <% @attachments.each do |a| %>
+    6: 
+    7:   <tr><td><%= a.id %></td><td><%= a.file_url %></td>
+    8:     <td><%= filepicker_image_tag a.file_url, w: 300, h: 300 %></td>
+  app/views/attachments/index.html.erb:5:in `_app_views_attachments_index_html_erb__1496310855078787141_70215890093160'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.5ms)
+
+
+Started GET "/attachments/new" for 127.0.0.1 at 2013-08-30 16:00:23 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 44ms (Views: 24.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-30 16:00:23 -0500
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-30 16:00:23 -0500
+Served asset /application.js - 200 OK (2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/attachments/new" for 127.0.0.1 at 2013-08-30 16:00:39 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 25ms (Views: 18.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-30 16:00:42 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-30 16:00:42 -0500
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-30 16:00:42 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-30 16:03:39 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-30 16:03:39 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-30 16:03:39 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-30 16:12:55 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 14ms (Views: 5.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-30 16:12:55 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-30 16:12:55 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/attachments" for 127.0.0.1 at 2013-08-30 16:13:05 -0500
+Processing by AttachmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MSFefkUZx7/S/8uKTGpRTjwPdN2I1M+rP+zLPOr82hg=", "attachment"=>{"file_url"=>"https://www.filepicker.io/api/file/DxEvMTFyT1KeQx3Ray8g"}, "commit"=>"Create Attachment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (9.2ms)[0m  INSERT INTO "attachments" ("created_at", "file_url", "page_count", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 30 Aug 2013 21:13:05 UTC +00:00], ["file_url", "https://www.filepicker.io/api/file/DxEvMTFyT1KeQx3Ray8g"], ["page_count", nil], ["updated_at", Fri, 30 Aug 2013 21:13:05 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 15ms
+
+NameError (uninitialized constant AttachmentsController::Resque):
+  app/controllers/attachments_controller.rb:11:in `create'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-30 16:18:10 -0500
+Connecting to database specified by database.yml
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 96ms (Views: 34.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-30 16:18:10 -0500
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-30 16:18:10 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/attachments" for 127.0.0.1 at 2013-08-30 16:18:19 -0500
+Processing by AttachmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MSFefkUZx7/S/8uKTGpRTjwPdN2I1M+rP+zLPOr82hg=", "attachment"=>{"file_url"=>"https://www.filepicker.io/api/file/q9XFP3PFQMmbBCgRTpue"}, "commit"=>"Create Attachment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.5ms)[0m  INSERT INTO "attachments" ("created_at", "file_url", "page_count", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 30 Aug 2013 21:18:19 UTC +00:00], ["file_url", "https://www.filepicker.io/api/file/q9XFP3PFQMmbBCgRTpue"], ["page_count", nil], ["updated_at", Fri, 30 Aug 2013 21:18:19 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  Rendered attachments/create.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 7.0ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-30 16:18:19 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-30 16:18:19 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/attachments/15" for 127.0.0.1 at 2013-08-30 16:18:21 -0500
+Processing by AttachmentsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mAttachment Load (0.4ms)[0m  SELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1  [["id", "15"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "attachments" SET "page_count" = 2, "updated_at" = '2013-08-30 21:18:22.056377' WHERE "attachments"."id" = 15
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  Rendered attachments/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 828ms (Views: 4.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-30 16:18:22 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-30 16:18:22 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36mAttachment Load (44.0ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-30 16:18:38 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-30 16:18:38 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-30 16:18:38 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/attachments" for 127.0.0.1 at 2013-08-30 16:18:47 -0500
+Processing by AttachmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MSFefkUZx7/S/8uKTGpRTjwPdN2I1M+rP+zLPOr82hg=", "attachment"=>{"file_url"=>"https://www.filepicker.io/api/file/kH0EZ9RCQ52lP37JcyxO"}, "commit"=>"Create Attachment"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "attachments" ("created_at", "file_url", "page_count", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 30 Aug 2013 21:18:47 UTC +00:00], ["file_url", "https://www.filepicker.io/api/file/kH0EZ9RCQ52lP37JcyxO"], ["page_count", nil], ["updated_at", Fri, 30 Aug 2013 21:18:47 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  Rendered attachments/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-30 16:18:47 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-30 16:18:47 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+  [1m[36mAttachment Load (4.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "attachments" SET "page_count" = 2, "updated_at" = '2013-08-30 21:18:50.885977' WHERE "attachments"."id" = 16[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+
+
+Started GET "/attachments/16" for 127.0.0.1 at 2013-08-30 16:18:53 -0500
+Processing by AttachmentsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mAttachment Load (0.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  Rendered attachments/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 457ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-30 16:18:53 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-30 16:18:53 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-30 16:18:56 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-30 16:18:56 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-30 16:19:20 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-30 16:19:20 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-30 16:19:20 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/attachments" for 127.0.0.1 at 2013-08-30 16:19:27 -0500
+Processing by AttachmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MSFefkUZx7/S/8uKTGpRTjwPdN2I1M+rP+zLPOr82hg=", "attachment"=>{"file_url"=>"https://www.filepicker.io/api/file/L8r5D3w0Qg6X4j461677"}, "commit"=>"Create Attachment"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "attachments" ("created_at", "file_url", "page_count", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 30 Aug 2013 21:19:27 UTC +00:00], ["file_url", "https://www.filepicker.io/api/file/L8r5D3w0Qg6X4j461677"], ["page_count", nil], ["updated_at", Fri, 30 Aug 2013 21:19:27 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  Rendered attachments/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-30 16:19:27 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-30 16:19:27 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+  [1m[36mAttachment Load (4.8ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mUPDATE "attachments" SET "page_count" = 2, "updated_at" = '2013-08-30 21:19:30.241425' WHERE "attachments"."id" = 17[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-30 16:20:30 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 16ms (Views: 8.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-30 16:20:30 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-30 16:20:30 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/attachments" for 127.0.0.1 at 2013-08-30 16:20:44 -0500
+Processing by AttachmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MSFefkUZx7/S/8uKTGpRTjwPdN2I1M+rP+zLPOr82hg=", "attachment"=>{"file_url"=>"https://www.filepicker.io/api/file/9tjBrCxbSmaujwnJQfTD"}, "commit"=>"Create Attachment"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "attachments" ("created_at", "file_url", "page_count", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 30 Aug 2013 21:20:44 UTC +00:00], ["file_url", "https://www.filepicker.io/api/file/9tjBrCxbSmaujwnJQfTD"], ["page_count", nil], ["updated_at", Fri, 30 Aug 2013 21:20:44 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  Rendered attachments/create.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 4.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-30 16:20:44 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-30 16:20:44 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+  [1m[36mAttachment Load (5.4ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mUPDATE "attachments" SET "page_count" = 2, "updated_at" = '2013-08-30 21:20:45.946966' WHERE "attachments"."id" = 18[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+Connecting to database specified by database.yml
+
+
+Started GET "/attachments" for 127.0.0.1 at 2013-08-30 16:20:55 -0500
+Processing by AttachmentsController#index as HTML
+  Rendered attachments/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <table>
+    3:   <tr><th>Id</th><th>Filepicker.io Url</th><th>image</th></tr>
+    4: 
+    5:   <% @attachments.each do |a| %>
+    6: 
+    7:   <tr><td><%= a.id %></td><td><%= a.file_url %></td>
+    8:     <td><%= filepicker_image_tag a.file_url, w: 300, h: 300 %></td>
+  app/views/attachments/index.html.erb:5:in `_app_views_attachments_index_html_erb__1662975305258205784_70195719739260'
+
+
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/dhaivat/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-30 16:21:00 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-30 16:21:00 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-30 16:21:00 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/attachments" for 127.0.0.1 at 2013-08-30 16:21:08 -0500
+Processing by AttachmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MSFefkUZx7/S/8uKTGpRTjwPdN2I1M+rP+zLPOr82hg=", "attachment"=>{"file_url"=>"https://www.filepicker.io/api/file/HXdKLMWCTL6hRhAbnqYp"}, "commit"=>"Create Attachment"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "attachments" ("created_at", "file_url", "page_count", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 30 Aug 2013 21:21:08 UTC +00:00], ["file_url", "https://www.filepicker.io/api/file/HXdKLMWCTL6hRhAbnqYp"], ["page_count", nil], ["updated_at", Fri, 30 Aug 2013 21:21:08 UTC +00:00]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  Rendered attachments/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 3.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-30 16:21:08 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-30 16:21:08 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+  [1m[36mAttachment Load (5.1ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1[0m  [["id", 19]]
+
+
+Started GET "/attachments/19" for 127.0.0.1 at 2013-08-30 16:21:09 -0500
+Processing by AttachmentsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mAttachment Load (0.2ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."id" = ? LIMIT 1[0m  [["id", "19"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mUPDATE "attachments" SET "page_count" = 2, "updated_at" = '2013-08-30 21:21:10.361802' WHERE "attachments"."id" = 19[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "attachments" SET "page_count" = 2, "updated_at" = '2013-08-30 21:21:10.392544' WHERE "attachments"."id" = 19[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+  Rendered attachments/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 450ms (Views: 4.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-30 16:21:10 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-30 16:21:10 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-31 22:21:43 -0500
+Processing by AttachmentsController#new as HTML
+  Rendered attachments/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-31 22:21:43 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-31 22:21:43 -0500
+Served asset /application.js - 200 OK (0ms)
